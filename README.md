@@ -127,8 +127,8 @@ I recommend replacing the original ATA hard disk with a new SATA SSD for perform
 
 [SATA 2.5" to 3.5" Adapter](https://www.amazon.com/General-Drive-HDD-Adapter-CADDY/dp/B00F3QFKNS/)
 
-iFixit has a decent guide for replacing the drive. I think they also sell the necessary tools if you don't have them.  You'll need a long, slender driver and variously sized torx bits.
-https://www.ifixit.com/Guide/iMac+Intel+20-Inch+EMC+2105+and+2118+Hard+Drive+Replacement/1092
+iFixit has a decent [guide for replacing the drive](https://www.ifixit.com/Guide/iMac+Intel+20-Inch+EMC+2105+and+2118+Hard+Drive+Replacement/1092). I think they also sell the necessary tools if you don't have them.  You'll need a long, slender driver and variously sized torx bits.
+
 
 **Note: it's really hard getting the case off.** There are hidden latches at the top that you're supposed to be able to depress by pushing a plastic card into a slot at the back of the machine. It took me a very long time to finally get the latch to disengage. Take your time and be patient -- it'll eventually come free. I believe there's a less invasive way to pull the latches using a strong neodymium magnet, but I don't have one and can't confirm it works. It's worth a shot if you have a strong magnet, because the card-latch trick is a real pain.
 
@@ -180,12 +180,11 @@ Creating a generous partition for swap, since it's difficult to resize this late
 
 The final partition can fill the remainder of the disk. It will be formatted ext4 and will be the root filesystem mounted on /.
 
-------------------------------------------------------
-Partition     | Size   | Type  | Flags  | Mount point
-______________________________________________________
-/dev/sda1     | 500MB  | ext4  | boot   | /boot
-/dev/sda2     | 8GB    | swap  |        |
-/dev/sda3     | +100%  | ext4  |        | /
+| Partition     | Size   | Type  | Flags  | Mount point
+| ------------- | ------ | ----- | ------ | ------------
+| /dev/sda1     | 500MB  | ext4  | boot   | /boot
+| /dev/sda2     | 8GB    | swap  |        |
+| /dev/sda3     | +100%  | ext4  |        | /
 
 
 ### Complete installation and reboot to Grub
