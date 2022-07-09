@@ -143,7 +143,7 @@ You can also buy a cheap external enclosure to access files on the old disk via 
 
 ### Boot media
 
-Download the latest Debian multi-arch network install ISO here (currently, debian-11.2.0-amd64-i386-netinst.iso "Bullseye"):
+Download the latest Debian multi-arch network install ISO here (currently, debian-11.4.0-amd64-i386-netinst.iso "Bullseye"):
 [https://cdimage.debian.org/debian-cd/current/multi-arch/iso-cd/](https://cdimage.debian.org/debian-cd/current/multi-arch/iso-cd/)
 
 The multi-arch network install ISO (amd64-i386-netinst) should have a 32-bit EFI boot image and (unlike the i386 version) it will install the 64-bit kernel and user-space software.
@@ -153,7 +153,7 @@ Use your favorite disk imaging method or just use the unix 'dd' to write the ISO
 **NOTE: make sure to replace sdX with you actual usb device. Be careful not to accidentally use the device for your computer's main drive!**
 
 ```
-dd if=debian-11.2.0-amd64-i386-netinst.iso of=/dev/sdX bs=1M status=progress
+dd if=debian-11.4.0-amd64-i386-netinst.iso of=/dev/sdX bs=1M status=progress
 ```
 
 Boot your iMac with the USB drive plugged in and hold down the option key. It should appear as an EFI bootable removable disk. Grub will load and you can begin the Debian installer. My USB stick takes absolutely forever to boot, so be patient even if it appears to be locked up.
